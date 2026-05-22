@@ -2,7 +2,7 @@
 set name=Frhed
 echo.%name%...
 for /F "tokens=3,*" %%A in ('reg query "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Local AppData"^|find /V "HKEY_"') do @call set DIR=%%B\RApps\appdb
-if /I "%~1"=="/Expert" (shift) else call "%systemroot%\system32\rapps" /INSTALL ?
+if /I "%~1"=="/Expert" (shift) else call "%systemroot%\system32\rapps" /INSTALL /S ?
 2>nul md "%DIR%"
 >nul copy /Y "%~f0" "%DIR%\%name%.txt"
 start "" "%systemroot%\system32\rapps.exe" /INSTALL %~1 %name%
