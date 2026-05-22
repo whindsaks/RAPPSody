@@ -10,7 +10,7 @@ goto :EOF
 
 [Section]
 Name=Inno Setup
-Description=Inno Setup is an open-source installation builder for Windows applications
+Description=An open-source installation builder for Windows applications
 LicenseType=1
 Version=5.6.1
 URLDownload=https://files.jrsoftware.org/is/5/innosetup-5.6.1-unicode.exe
