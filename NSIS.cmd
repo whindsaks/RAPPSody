@@ -1,5 +1,5 @@
 @echo off&setlocal&REM v0.4
-for /F "usebackq eol=; tokens=1,2 delims== " %%A in ("%~f0") do if "%%~A"=="Name" set %%~A=%%~B
+for /F "usebackq eol=; tokens=1,* delims== " %%A in ("%~f0") do if /I "%%~A"=="Name" set %%~A=%%~B
 echo.%name%...
 for /F "tokens=3,*" %%A in ('reg query "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Local AppData"^|find /V "HKEY_"') do @call set DIR=%%B\RApps\appdb
 if /I "%~1"=="/Expert" (shift) else call "%systemroot%\system32\rapps" /INSTALL /S ?
@@ -10,12 +10,12 @@ goto :EOF
 
 [Section]
 Name=NSIS
-Version=3.12
+Description=A professional open source system to create Windows installers
+URLSite=https://nsis.sourceforge.io/
 License=zlib/libpng, bzip2, CPLv1
 LicenseType=1
-Description=A professional open source system to create Windows installers
 Category=7
-URLSite=https://nsis.sourceforge.io/
+Version=3.12
 URLDownload=https://sourceforge.net/projects/nsis/files/NSIS%203/3.12/nsis-3.12-setup.exe
 
 [Section.x86]

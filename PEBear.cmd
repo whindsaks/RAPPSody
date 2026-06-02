@@ -21,5 +21,5 @@ SizeBytes=6683253
 Installer=Generate
 
 [Generate]
-DelReg = HKCU\Software\PE-bear\PE-bear|HKCU\Software\Trolltech\OrganizationDefaults\Qt Factory Cache 4.8|HKCU\Software\Trolltech\OrganizationDefaults\Qt Plugin Cache 4.8.false
-DelRegEmpty = HKCU\Software\PE-bear
+DelReg=HKCU\Software\PE-bear\PE-bear|HKCU\Software\Trolltech\OrganizationDefaults\Qt Factory Cache 4.8|HKCU\Software\Trolltech\OrganizationDefaults\Qt Plugin Cache 4.8.false
+DelRegEmpty=HKCU\Software\PE-bear
